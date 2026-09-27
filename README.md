@@ -24,42 +24,6 @@ The algorithm is compared with the original **LO**, **GA**, **SA**, **P2C** (Pow
 
 ---
 
-## Repository structure
-
-```
-.
-‚îú‚îÄ‚îÄ code/
-‚îÇ   ‚îú‚îÄ‚îÄ tasks.py                          # seeded task generator (ranges of Table 3)
-‚îÇ   ‚îú‚îÄ‚îÄ nodes.py                          # seeded fog/cloud node generator; pe/ce efficiency coefficients
-‚îÇ   ‚îú‚îÄ‚îÄ calculate_min_values.py           # normalization baselines M_min, E_min, C_min (Eqs. 13‚Äì15)
-‚îÇ   ‚îú‚îÄ‚îÄ evaluate_solution.py              # makespan, energy, cost, fitness (Eqs. 5‚Äì11, 16); evaluation counter
-‚îÇ   ‚îú‚îÄ‚îÄ proposed_scheduling.py            # ELO heuristic initialization (Eqs. 20‚Äì23)
-‚îÇ   ‚îú‚îÄ‚îÄ hybird_lo_scheduling.py           # ELO = heuristic initialization + LO refinement (Algorithm 2)
-‚îÇ   ‚îú‚îÄ‚îÄ lo_scheduling.py                  # original LO (Algorithm 1); shared refinement engine
-‚îÇ   ‚îú‚îÄ‚îÄ ga_scheduling.py                  # GA baseline
-‚îÇ   ‚îú‚îÄ‚îÄ simulated_annealing_scheduling.py # SA baseline
-‚îÇ   ‚îú‚îÄ‚îÄ p2c_scheduling.py                 # P2C baseline
-‚îÇ   ‚îú‚îÄ‚îÄ random_scheduling.py              # Random baseline
-‚îÇ   ‚îú‚îÄ‚îÄ nsga2_scheduling.py               # NSGA-II baseline
-‚îÇ   ‚îú‚îÄ‚îÄ run_experiments.py                # main experiments (100‚Äì1000 tasks)
-‚îÇ   ‚îú‚îÄ‚îÄ run_r25.py                        # ablation study and ELO vs. NSGA-II comparison
-‚îÇ   ‚îú‚îÄ‚îÄ make_tables.py                    # result tables (mean ¬± std)
-‚îÇ   ‚îú‚îÄ‚îÄ statistics.py                     # Wilcoxon (exact, Holm), Friedman/Nemenyi tests
-‚îÇ   ‚îú‚îÄ‚îÄ sensitivity.py                    # weight sensitivity analysis
-‚îÇ   ‚îú‚îÄ‚îÄ make_figures.py                   # convergence curves and boxplots
-‚îÇ   ‚îî‚îÄ‚îÄ make_pareto_figure.py             # ELO vs. NSGA-II non-dominated solutions
-‚îî‚îÄ‚îÄ results/
-    ‚îú‚îÄ‚îÄ runs_100-400.csv                  # main experiments, 100‚Äì400 tasks
-    ‚îú‚îÄ‚îÄ runs_500-1000.csv                 # scalability experiments, 500 and 1000 tasks
-    ‚îú‚îÄ‚îÄ ablation.csv                      # ELO ablation variants
-    ‚îú‚îÄ‚îÄ nsga2.csv                         # ELO vs. NSGA-II (fitness, hypervolume, front size, runtime)
-    ‚îú‚îÄ‚îÄ wilcoxon.csv                      # paired Wilcoxon tests
-    ‚îú‚îÄ‚îÄ friedman_ranks.csv                # Friedman mean ranks (120 matched instances)
-    ‚îî‚îÄ‚îÄ random_assignment.csv             # share of tasks per node for the Random scheduler
-```
-
----
-
 ## Requirements
 
 - Python ‚â• 3.10 (the reported experiments used Python 3.11)
