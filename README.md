@@ -4,7 +4,6 @@ Source code, random seeds, and per-run results for the paper:
 
 > N. Ababneh, A. K. Abasi, Y. Hamid, and A. Koci, "Enhanced Lemurs Optimizer for Multi-Objective Task Scheduling in Heterogeneous Fog‚ÄìCloud Architectures," *Journal of Cloud Computing* (under review).
 
-The repository contains everything needed to reproduce all tables, figures, and statistical tests of the paper.
 
 ---
 
